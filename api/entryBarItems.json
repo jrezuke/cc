@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Home",
+    "route": "/home",
+    "iconClass": "fa fa-user-plus fa-3x"
+  },
+  {
+    "title": "Contact",
+    "route": "/contact",
+    "iconClass": "fa fa-info fa-3x"
+  }
+]

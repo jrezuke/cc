@@ -1,0 +1,24 @@
+<div class="container " [@divWidthTrigger]="expandedState">
+  <a class="link" (click)="toggleExpandedState()">
+    <i [@iconTrigger]="expandedState" class="fa fa-chevron-up" aria-hidden="true"></i>
+  </a>
+  <span *ngIf="!expanded">Subject: {{subjectId}} Entry date: {{entryDate | date: 'MM/dd/yyyy'}}</span>
+  <div class="row">
+    <div *ngIf="expanded" class="col-sm-8">
+      <table>
+        <tr>
+          <th>Subject Id</th>
+          <th>Weight (kg)</th>
+          <th>Study hours</th>
+          <th>Study Date</th>
+        </tr>
+        <tr>
+          <td>{{subjectId}}</td>
+          <td>{{weight}}</td>
+          <td>{{hours}}</td>
+          <td>{{entryDate | date: 'MM/dd/yyyy'}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

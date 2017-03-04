@@ -1,0 +1,7 @@
+.side-bar{
+  height: 500px;
+  background-image: -webkit-linear-gradient(top, white 0%, Aqua    100%);
+  background-image: linear-gradient(to bottom, white  0%, Gainsboro      100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdfdfdf', GradientType=0);
+}

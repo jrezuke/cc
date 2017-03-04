@@ -1,0 +1,21 @@
+.navbar-default {
+  background-image: -webkit-linear-gradient(top, white 0%, Aqua    100%);
+  background-image: linear-gradient(to bottom, white  0%, Gainsboro      100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdfdfdf', GradientType=0);
+}
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: blue;
+    background-color: transparent;
+}
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    color: blue;
+  background-image: -webkit-linear-gradient(white 0%, DeepSkyBlue 100%);
+  background-image: -o-linear-gradient(white 0%, DeepSkyBlue 100%);
+  background-image: linear-gradient(white 0%, DeepSkyBlue 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdfdfdf', GradientType=0);
+}

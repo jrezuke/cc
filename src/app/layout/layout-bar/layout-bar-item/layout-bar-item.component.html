@@ -1,0 +1,6 @@
+<div *ngIf="expanded" [@visibleTrigger]="'visible'">
+  <a [routerLink]="layoutBarItem.route">
+    <i [ngClass]="layoutBarItem.iconClass" aria-hidden="true"></i>
+    <h4>{{layoutBarItem.title}}</h4>
+  </a>
+</div>

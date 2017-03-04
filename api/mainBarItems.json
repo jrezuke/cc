@@ -1,0 +1,22 @@
+[
+  {
+    "title": "New Entry",
+    "route": "entry/new",
+    "iconClass": "fa fa-user-plus fa-3x"
+  },
+  {
+    "title": "About",
+    "route": "about",
+    "iconClass": "fa fa-info fa-3x"
+  },
+  {
+    "title": "Manage Subjects",
+    "route": "subjects",
+    "iconClass": "fa fa-info fa-3x"
+  },
+  {
+    "title": "Manage Sites",
+    "route": "sites",
+    "iconClass": "fa fa-info fa-3x"
+  }
+]

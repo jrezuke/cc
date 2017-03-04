@@ -1,0 +1,14 @@
+<div  class="container">
+  <div class="row">
+    <aside [@sideBarVisibility]='state' class="col-sm-2 side-bar">
+          <layout-bar [layoutBarItems]='layoutBarItems' [expanded]="expanded"></layout-bar>
+    </aside>
+    <section  class="col-sm-7">
+      <router-outlet></router-outlet>
+    </section>
+    <aside  class="col-sm-2">
+      <h4>Right Side Stuff</h4>
+    </aside>
+  </div>
+</div>
+<!-- /container -->
