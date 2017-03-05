@@ -6,11 +6,13 @@ import { SubjectInfoComponent } from './subject-info/subject-info.component';
 import { EntryNewComponent } from './entry-new/entry-new.component';
 import { RouterModule } from "@angular/router";
 import { FormsModule } from '@angular/forms';
+import { EntryEditComponent } from './entry-edit/entry-edit.component';
 
 @NgModule({
   imports: [
     CommonModule, RouterModule, FormsModule
   ],
-  declarations: [EntryComponent, SubjectInfoComponent, EntryNewComponent]
+  declarations: [EntryComponent, SubjectInfoComponent, 
+    EntryNewComponent, EntryEditComponent]
 })
 export class EntryModule { }

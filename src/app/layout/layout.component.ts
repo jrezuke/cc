@@ -84,7 +84,10 @@ export class LayoutComponent implements OnInit {
       setTimeout(function() {
             that.expanded = true;
           }, 500);
-
+      this.mainBarItems = [];    
+      
+    }
+    if (path === '/entry/edit') {
       this._layoutService.getMainBarItems('entry')
         .subscribe((res) => {
           this.mainBarItems = res;

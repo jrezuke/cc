@@ -47,7 +47,7 @@ export class EntryNewComponent implements OnInit {
     this._entryService.addEntry(this.newEntry)
       .subscribe((res) => {
         console.log("response:", res);
-        //this._router.navigate(['/subjects']);
+        this._router.navigate(['/entry/edit']);
       },
       (e: any) => {
         console.log("error:", e);

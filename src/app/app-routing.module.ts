@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { EntryComponent } from './entry/entry.component';
 import { EntryNewComponent } from './entry/entry-new/entry-new.component';
+import { EntryEditComponent } from './entry/entry-edit/entry-edit.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 
 
@@ -18,8 +19,9 @@ const routes = [
   { path: 'subjects', loadChildren: 'app/subjects/subjects.module#SubjectsModule' },
   { path: 'sites', loadChildren: 'app/sites/sites.module#SitesModule' },
   { path: 'entry', component: EntryComponent,
-  children: [
-      { path: 'new', component: EntryNewComponent }
+    children: [
+      { path: 'new', component: EntryNewComponent },
+      { path: 'edit', component: EntryEditComponent }
     ]
   }
 ];
