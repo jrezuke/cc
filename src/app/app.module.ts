@@ -21,6 +21,7 @@ import { SubjectsService } from './subjects/subjects.service';
 import { EntryService } from './entry/entry.service';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

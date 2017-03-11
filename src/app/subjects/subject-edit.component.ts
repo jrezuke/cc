@@ -25,7 +25,8 @@ export class SubjectEditComponent implements OnInit {
     this._activatedRoute.data.subscribe(val => {
       console.log("val:", val);
       this.subject = val['subjectEdit'];
-      this.subject.startDate = this.parseDate(this.subject.startDate).toDateString();
+      this.subject.startDate = this._convertJsonDateStringToMmddyyy(this.subject.startDate);
+      //this.subject.startDate = this.parseDate(this.subject.startDate).toDateString();
       console.log("subject:", this.subject);
     });
     this._sitesService.getSites().subscribe((res) => {
@@ -56,5 +57,12 @@ export class SubjectEditComponent implements OnInit {
   onCancel() {
     console.log('onCancel');
     this._router.navigate(['/home']);
+  }
+
+  private _convertJsonDateStringToMmddyyy(date: string){
+    let yr = date.substr(0,4);
+    let mo = date.substr(5,2);
+    let da = date.substr(8,2);
+    return mo + "-" + da + "-" + yr; 
   }
 }

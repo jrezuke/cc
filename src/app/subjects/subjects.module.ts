@@ -8,12 +8,15 @@ import { SubjectsRoutingModule } from './subjects-routing.module';
 import { SubjectEditComponent } from './subject-edit.component';
 import { SubjectsNewComponent } from './subjects-new.component';
 import { SubjectResolver } from './subject.resolver';
+import { EntriesComponent } from '../entries/entries.component';
+import { SubjectsTestComponent } from './subjects-test.component';
+
 
 @NgModule({
   imports: [SubjectsRoutingModule, CommonModule, FormsModule],
   declarations: [SubjectsComponent,
-    SubjectsListComponent,
-    SubjectEditComponent, SubjectsNewComponent],
+    SubjectsListComponent, EntriesComponent,
+    SubjectEditComponent, SubjectsNewComponent, SubjectsTestComponent],
   providers: [SubjectResolver]
 })
 

@@ -5,18 +5,24 @@ import { SubjectsComponent } from './subjects.component';
 import { SubjectEditComponent } from './subject-edit.component';
 import { SubjectsNewComponent } from './subjects-new.component';
 import { SubjectResolver } from './subject.resolver';
-
+import { EntriesComponent } from '../entries/entries.component';
+import { SubjectsTestComponent } from './subjects-test.component';
 const subjectsRoutes: Routes = [
   {
     path: '', component: SubjectsComponent,
     children: [
-      { path: '', component: SubjectsListComponent },
+      { path: '', component: SubjectsListComponent, outlet: 'subjects' },
       { path: 'new', component: SubjectsNewComponent }
     ]
   },
   {
     path: ':id', component: SubjectEditComponent,
-    resolve: { subjectEdit: SubjectResolver }
+      resolve: { subjectEdit: SubjectResolver },
+      children:[
+        {path: 'edit', component: SubjectsTestComponent, outlet: 'subjects'}
+        //{ path: 'entries', component: EntriesComponent, outlet: 'subjects'}
+      ]
+    
   },
 
 
