@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { EntryModule } from "../entry/entry.module";
+
 import { SubjectsComponent } from './subjects.component';
 import { SubjectsListComponent } from './subjects-list.component';
 import { SubjectsRoutingModule } from './subjects-routing.module';
@@ -13,7 +15,7 @@ import { SubjectsTestComponent } from './subjects-test.component';
 
 
 @NgModule({
-  imports: [SubjectsRoutingModule, CommonModule, FormsModule],
+  imports: [SubjectsRoutingModule, CommonModule, FormsModule, EntryModule],
   declarations: [SubjectsComponent,
     SubjectsListComponent, EntriesComponent,
     SubjectEditComponent, SubjectsNewComponent, SubjectsTestComponent],

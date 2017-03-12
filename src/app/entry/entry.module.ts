@@ -7,12 +7,13 @@ import { EntryNewComponent } from './entry-new/entry-new.component';
 import { RouterModule } from "@angular/router";
 import { FormsModule } from '@angular/forms';
 import { EntryEditComponent } from './entry-edit/entry-edit.component';
+import { FluidInfusionsComponent } from './fluid-infusions/fluid-infusions.component';
 
 @NgModule({
   imports: [
     CommonModule, RouterModule, FormsModule
   ],
   declarations: [EntryComponent, SubjectInfoComponent, 
-    EntryNewComponent, EntryEditComponent]
+    EntryNewComponent, EntryEditComponent, FluidInfusionsComponent]
 })
 export class EntryModule { }
