@@ -7,7 +7,6 @@ import { ContactComponent } from './contact/contact.component';
 import { EntryComponent } from './entry/entry.component';
 import { EntryNewComponent } from './entry/entry-new/entry-new.component';
 import { EntryEditComponent } from './entry/entry-edit/entry-edit.component';
-import { SubjectsComponent } from './subjects/subjects.component';
 
 
 const routes = [

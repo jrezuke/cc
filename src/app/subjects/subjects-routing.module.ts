@@ -11,7 +11,7 @@ const subjectsRoutes: Routes = [
   {
     path: '', component: SubjectsComponent,
     children: [
-      { path: '', component: SubjectsListComponent, outlet: 'subjects' },
+      { path: '', component: SubjectsListComponent },
       { path: 'new', component: SubjectsNewComponent }
     ]
   },
@@ -19,7 +19,7 @@ const subjectsRoutes: Routes = [
     path: ':id', component: SubjectEditComponent,
       resolve: { subjectEdit: SubjectResolver },
       children:[
-        {path: 'edit', component: SubjectsTestComponent, outlet: 'subjects'}
+        {path: 'edit', component: SubjectsTestComponent}
         //{ path: 'entries', component: EntriesComponent, outlet: 'subjects'}
       ]
     
