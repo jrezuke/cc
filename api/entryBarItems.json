@@ -1,12 +1,12 @@
 [
   {
-    "title": "Home",
-    "route": "/home",
+    "title": "Fluid Infusions",
+    "route": "fluid-infusions",
     "iconClass": "fa fa-user-plus fa-3x"
   },
   {
-    "title": "Contact",
-    "route": "/contact",
+    "title": "Parenteral Nutrition",
+    "route": "parenteral-nutrition",
     "iconClass": "fa fa-info fa-3x"
   }
 ]

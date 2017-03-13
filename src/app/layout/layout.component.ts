@@ -87,7 +87,10 @@ export class LayoutComponent implements OnInit {
       this.mainBarItems = [];    
       
     }
-    if (path === '/entry/edit') {
+    if(path.includes("entries")){
+
+    }
+    if ((path === '/entry/edit') || (path.includes("entries"))) {
       this._layoutService.getMainBarItems('entry')
         .subscribe((res) => {
           this.mainBarItems = res;

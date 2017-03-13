@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { LayoutBarItem } from './layout-bar-item/layout-bar-item';
+import { Route } from '@angular/router'
 
 @Component({
   selector: 'layout-bar',
@@ -14,6 +15,10 @@ export class LayoutBarComponent implements OnInit {
 
   ngOnInit() {
     console.log("LayoutBarComponent.ngOnInit expanded", this.expanded);
+  }
+
+  onItemClick(item: LayoutBarItem){
+    console.log("LayoutBarComponent.onItemClick", item);
   }
 
 }

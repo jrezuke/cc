@@ -1,5 +1,5 @@
 <div>
-  <layout-bar-item *ngFor="let item of layoutBarItems"
+  <layout-bar-item (click)="onItemClick(item)" *ngFor="let item of layoutBarItems"
     [layoutBarItem]="item" [expanded]='expanded'>
   </layout-bar-item>
 </div>
