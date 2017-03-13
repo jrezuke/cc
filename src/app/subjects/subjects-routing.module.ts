@@ -7,6 +7,10 @@ import { SubjectsNewComponent } from './subjects-new.component';
 import { SubjectResolver } from './subject.resolver';
 import { EntriesComponent } from '../entries/entries.component';
 import { EntryComponent } from '../entry/entry.component';
+import { FluidInfusionsComponent } from '../entry/fluid-infusions/fluid-infusions.component';
+import { ParenteralNutritionComponent } from '../entry/parenteral-nutrition/parenteral-nutrition.component';
+
+
 const subjectsRoutes: Routes = [
   {
     path: '', component: SubjectsComponent,
@@ -23,7 +27,15 @@ const subjectsRoutes: Routes = [
           path: 'entries', component: EntriesComponent,
           children: [
             {
-              path: ':id', component: EntryComponent
+              path: ':id', component: EntryComponent,
+              children: [
+                {
+                  path: 'fluid-infusions', component: FluidInfusionsComponent
+                },
+                {
+                  path: 'parenteral-nutrition', component: ParenteralNutritionComponent
+                }
+              ]
             }
           ]
         }

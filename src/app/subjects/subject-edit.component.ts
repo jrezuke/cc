@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { FormGroup, Validators } from '@angular/forms';
 import { Subject } from './subject';
 import { SubjectsService } from './subjects.service';
@@ -15,13 +15,30 @@ export class SubjectEditComponent implements OnInit {
   id: string;
   subject: Subject;
   sites: Site[] = new Array();
+  showForm = true;
 
   constructor(private _activatedRoute: ActivatedRoute,
-    private _router: Router,
+    private _router: Router,    
     private _sitesService: SitesService,
-    private _subjectsService: SubjectsService) { }
+    private _subjectsService: SubjectsService
+    ) { }
 
   ngOnInit() {
+    console.log("_activatedRoute", this._activatedRoute);
+    this._router.events.subscribe(event =>{
+      if (event instanceof NavigationEnd) {
+        // this._accountService.showSpinner = false;
+        console.log('entry.Component.ngInit.this._router.events.subscribe NavigationEnd-event:', event);
+        if(event.url.includes("entries")){
+          this.showForm = false;
+        }
+        else{
+          this.showForm = true;
+        }
+        //this.onPathChange(event.url);
+      }
+    })
+
     this._activatedRoute.data.subscribe(val => {
       console.log("val:", val);
       this.subject = val['subjectEdit'];
