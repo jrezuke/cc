@@ -19,7 +19,7 @@ import { LayoutService } from './layout/layout.service';
 import { SitesService } from './sites/sites.service';
 import { SubjectsService } from './subjects/subjects.service';
 import { EntryService } from './entry/entry.service';
-
+import { FluidInfusionsService } from "./entry/fluid-infusions/fluid-infusions.service";
 
 
 @NgModule({
@@ -43,7 +43,7 @@ import { EntryService } from './entry/entry.service';
     EntryModule
   ],
   providers: [LayoutService, SitesService, SubjectsService,
-    EntryService],
+    EntryService, FluidInfusionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
